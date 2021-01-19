@@ -18,6 +18,8 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Feature status is based on worst Control status
 - Control status is based on deviation
 - Deviation out total is calculated summing up N deviations outside tolerance
+- I implemented only one dashboard since I'm not sure how the behavior would be when there are several
+- I'm using scss modules to avoid name clashes. No need for name convention in this case, like BEM.
 
 ## Available Scripts
 

@@ -11,7 +11,7 @@ const Dashboard: React.FC<DashboardProps> = ({ name, isLoading, children }) => {
 	return (
 		<div className={styles.container}>
 			<div>
-				<h3>{name}</h3>
+				<span className={styles.name}>{name}</span>
 				{
 					isLoading && (
 						<AiOutlineReload />

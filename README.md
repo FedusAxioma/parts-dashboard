@@ -21,6 +21,12 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - I implemented only one dashboard since I'm not sure how the behavior would be when there are several
 - I'm using scss modules to avoid name clashes. No need for name convention in this case, like BEM.
 
+## Technical Debt
+
+- Implement technics for responsiveness
+- Move colors used on CSS to palette file
+- Use SVG images for icons and use it from CSS with class modifiers
+
 ## Available Scripts
 
 In the project directory, you can run:

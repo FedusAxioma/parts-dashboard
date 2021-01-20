@@ -14,21 +14,21 @@ const PartA: React.FC = () => {
 				<FeatureGrid colSpan={2} feature={partA?.features[0]} />
 				<FeatureGrid colSpan={1}>
 					<div className={styles.featuresGridContainer}>
-						<FeatureGrid colSpan={1} />
+						<FeatureGrid colSpan={1} feature={partA?.features[1]} />
 					</div>
 					<div className={styles.featuresGridContainer}>
-						<FeatureGrid colSpan={1} />
+						<FeatureGrid colSpan={1} feature={partA?.features[2]} />
 					</div>
 				</FeatureGrid>
 				<FeatureGrid colSpan={1}>
 					<div className={styles.featuresGridContainer}>
-						<FeatureGrid colSpan={1} />
+						<FeatureGrid colSpan={1} feature={partA?.features[3]} />
 					</div>
 					<div className={styles.featuresGridContainer}>
-						<FeatureGrid colSpan={1} />
+						<FeatureGrid colSpan={1} feature={partA?.features[4]} />
 					</div>
 				</FeatureGrid>
-				<FeatureGrid colSpan={1} />
+				<FeatureGrid colSpan={1} feature={partA?.features[5]} />
 			</div>
 		</Dashboard>
 	);

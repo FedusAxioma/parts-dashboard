@@ -1,14 +1,13 @@
 .featureGrid {
 	background-color: lightgray;
-	height: 100%;
-}
-
-.controlsContainer {
-	padding: 5px;
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	flex-wrap: wrap;
-	overflow: hidden;
-	height: 250px;
+	margin: 10px;
+	
+	.controlsContainer {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding: 10px;
+	}
 }

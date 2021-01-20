@@ -11,12 +11,12 @@ interface FeatureGridProps {
 }
 
 const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children }) => {
-	const flex = colSpan || 1;
-	const colWith = `${100 / flex}%`;
+	const colsTotal = colSpan || 1;
+	const colWith = `${100 / colsTotal}%`;
 	const getColHeaders = (): JSX.Element[] => {
 		const colHeaders = [];
 
-		for (let i = 0; i < flex; i++) {
+		for (let i = 0; i < colsTotal; i++) {
 			colHeaders.push(
 				<div style={{ width: colWith }}>
 					<ControlRowHeader />
@@ -28,18 +28,20 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 	};
 
 	return (
-		<div className={styles.featureGrid} style={{ flex }}>
+		<div className={styles.featureGrid} style={{ flex: colsTotal }}>
 			{
 				children || (
 					<React.Fragment>
 						<FeatureHeader title={feature?.name || ''} status={feature?.status || 'ERROR'} />
 						<div className={styles.controlsContainer}>
-							{
-								getColHeaders()
-							}
+							<div style={{ width: '100%', flexDirection: 'row', display: 'flex' }}>
+								{
+									getColHeaders()
+								}
+							</div>
 							{
 								feature?.controls.map(control => (
-									<div style={{ width: colWith }}>
+									<div style={{ width: colWith }} key={control.id}>
 										<ControlRow name={control.name} deviation={control.deviation} deviationOutTotal={control.deviationOutTotal} status={control.status} />
 									</div>
 								))

@@ -1,3 +1,14 @@
 .container {
+	display: flex;
 	flex: 1;
+	flex-direction: column;
+	height: calc(100% - 40px);
+	padding: 20px;
+
+	.name {
+		color: grey;
+		font-size: 24px;
+		font-weight: bold;
+		padding: 20px;
+	}
 }

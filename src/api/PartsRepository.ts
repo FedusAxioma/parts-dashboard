@@ -1,28 +1,8 @@
 // import axios from 'axios';
+import { mockPartA } from './Parts';
 import { Part } from '../interfaces/Part.js';
 
 const apiUrl = process.env.REACT_APP_API_URL;
-
-const mockPartA: Part = {
-	id: '123',
-	name: 'Part A',
-	features: [
-		{
-			id: '234',
-			name: 'Feature 1',
-			controls: [
-				{
-					id: '345',
-					name: 'Diameter',
-					deviation: 0,
-					deviationOutTotal: 0,
-					status: 'GOOD',
-				},
-			],
-			status: 'WARNING',
-		},
-	],
-};
 
 const getPart = async (partName: string): Promise<Part> => {
 	if (apiUrl) {
@@ -35,6 +15,13 @@ const getPart = async (partName: string): Promise<Part> => {
 
 		// Add console log to avoid linting issues
 		console.log(partName);
+
+		// Delay a few seconds to show loader
+		const sleep = (ms: number): Promise<void> => {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		};
+
+		await sleep(2000);
 
 		return Promise.resolve(mockPartA);
 	}

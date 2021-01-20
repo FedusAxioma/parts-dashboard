@@ -31,6 +31,12 @@ const PartsProvider = ({ children }: { children: ReactNode }): JSX.Element => {
 
 	React.useEffect(() => {
 		fetchPartA();
+
+		const id = setInterval(() => {
+			fetchPartA();
+		}, 10000);
+
+		return (): void => clearInterval(id);
 	}, []);
 
 	const store: PartsProviderStore = {

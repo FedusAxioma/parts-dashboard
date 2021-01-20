@@ -18,7 +18,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 
 		for (let i = 0; i < colsTotal; i++) {
 			colHeaders.push(
-				<div style={{ width: colWith }}>
+				<div style={{ width: colWith }} key={i}>
 					<ControlRowHeader />
 				</div>
 			);

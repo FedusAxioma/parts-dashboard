@@ -10,4 +10,4 @@ const ControlRowHeader: React.FC = () => {
 	);
 };
 
-export default ControlRowHeader;
+export default React.memo(ControlRowHeader);

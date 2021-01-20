@@ -12,6 +12,8 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - The implemented dashboard has an individual layout specification, but the components used for it are very generic, so you can easily specify a new dashboard for a new Part in just a few minutes.
 - Used Flexbox to reduce number of media queries. Also decided to go for Flexbox instead of Grids so the dashboard layout is made based on components, and not changing anything at CSS level.
 - All controls that do not fit into the dashboard are hidden.
+- I included some custom hooks. In general I think this is a good practice because they work as a Controller on MVC model, making it easier to create tests on Views and also controller functions.
+- I decided to use a Poll mechanism to get data every 10 seconds. Instead a WebSocket can be used.
 
 ## Considerations
 
@@ -32,6 +34,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Improve styling: colors in general, font sizes, icons, margins, etc
 - Implement bottom dots to open modal to visualize all controls for a given Feature
 - Add more tests
+- Use enums for Status
 
 ## Available Scripts
 

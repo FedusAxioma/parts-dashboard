@@ -32,6 +32,7 @@ const PartsProvider = ({ children }: { children: ReactNode }): JSX.Element => {
 	React.useEffect(() => {
 		fetchPartA();
 
+		// Added as a poll mechanism. Instead we can use WebSockets
 		const id = setInterval(() => {
 			fetchPartA();
 		}, 10000);
@@ -44,6 +45,9 @@ const PartsProvider = ({ children }: { children: ReactNode }): JSX.Element => {
 		isFetching,
 	};
 
+	// In this case having two wrappers, one for values store and another for update is overkilled
+	// but I wanted to show the idea behind it. Usually this will prevent unnecessary renders on
+	// componentes that only have an update function, like setters
 	return (
 		<PartsContext.Provider value={store}>
 			<PartsUpdateContext.Provider value={{}}>

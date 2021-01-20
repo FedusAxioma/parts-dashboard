@@ -10,13 +10,13 @@ interface ControlRowProps {
 	status?: Status;
 }
 
+const getStatusIcon = (currentStatus: Status): JSX.Element => {
+	const statusValue = StatusHelper.getStatusValues(currentStatus);
+
+	return <statusValue.icon style={{ color: statusValue.color }} />;
+};
+
 const ControlRow: React.FC<ControlRowProps> = ({ name, deviation, deviationOutTotal, status }) => {
-	const getStatusIcon = (currentStatus: Status): JSX.Element => {
-		const statusValue = StatusHelper.getStatusValues(currentStatus);
-
-		return <statusValue.icon style={{ color: statusValue.color }} />;
-	};
-
 	return (
 		<div className={styles.row}>
 			<span>{name}</span>
@@ -31,4 +31,4 @@ const ControlRow: React.FC<ControlRowProps> = ({ name, deviation, deviationOutTo
 	);
 };
 
-export default ControlRow;
+export default React.memo(ControlRow);

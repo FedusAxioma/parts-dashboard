@@ -11,6 +11,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - I didn't use GraphQL for the solution because of two reasons: I wanted to show how to connect to a backend (and using GraphQL I might connect to the DB directly) and also I don't think I was going to be able to properly set everything up at the given time.
 - The implemented dashboard has an individual layout specification, but the components used for it are very generic, so you can easily specify a new dashboard for a new Part in just a few minutes.
 - Used Flexbox to reduce number of media queries. Also decided to go for Flexbox instead of Grids so the dashboard layout is made based on components, and not changing anything at CSS level.
+- All controls that do not fit into the dashboard are hidden.
 
 ## Considerations
 
@@ -29,6 +30,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Move colors used on CSS to palette file
 - Use SVG images for icons and use it from CSS with class modifiers
 - Improve styling: colors in general, font sizes, icons, margins, etc
+- Implement bottom dots to open modal to visualize all controls for a given Feature
 
 ## Available Scripts
 

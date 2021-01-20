@@ -20,7 +20,7 @@ const createControls = (requiredAmount: number, isRandomStatus: boolean): Contro
 	return controls;
 };
 
-const mockPartA: Part = {
+const getMockPartA = (): Part => ({
 	id: uuidv4(),
 	name: 'Part A',
 	features: [
@@ -34,13 +34,13 @@ const mockPartA: Part = {
 			id: uuidv4(),
 			name: 'Feature 2',
 			status: 'WARNING',
-			controls: createControls(2, true),
+			controls: createControls(4, true),
 		},
 		{
 			id: uuidv4(),
 			name: 'Feature 3',
 			status: 'GOOD',
-			controls: createControls(2, false),
+			controls: createControls(3, false),
 		},
 		{
 			id: uuidv4(),
@@ -58,11 +58,11 @@ const mockPartA: Part = {
 			id: uuidv4(),
 			name: 'Feature 6',
 			status: 'GOOD',
-			controls: createControls(2, false),
+			controls: createControls(14, false),
 		},
 	],
-};
+});
 
 export {
-	mockPartA
+	getMockPartA
 };

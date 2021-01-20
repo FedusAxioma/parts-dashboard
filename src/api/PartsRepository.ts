@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import { mockPartA } from './Parts';
+import { getMockPartA } from './Parts';
 import { Part } from '../interfaces/Part.js';
 
 const apiUrl = process.env.REACT_APP_API_URL;
@@ -23,7 +23,7 @@ const getPart = async (partName: string): Promise<Part> => {
 
 		await sleep(2000);
 
-		return Promise.resolve(mockPartA);
+		return Promise.resolve(getMockPartA());
 	}
 
 	throw new Error('API url not defined');

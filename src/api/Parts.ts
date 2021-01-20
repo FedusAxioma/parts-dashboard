@@ -11,8 +11,8 @@ const createControls = (requiredAmount: number, isRandomStatus: boolean): Contro
 		controls.push({
 			id: uuidv4(),
 			name: ['Diameter', 'X', 'Y', 'Z'][Math.floor(Math.random() * 4)],
-			deviation: isRandomStatus ? Math.random() : 0,
-			deviationOutTotal: isRandomStatus ? Math.random() : 0,
+			deviation: isRandomStatus ? +Math.random().toFixed(1) : 0,
+			deviationOutTotal: isRandomStatus ? +Math.random().toFixed(1) : 0,
 			status: isRandomStatus ? ['GOOD', 'WARNING', 'ERROR'][Math.floor(Math.random() * 3)] as Status : 'GOOD',
 		});
 	}
@@ -28,7 +28,37 @@ const mockPartA: Part = {
 			id: uuidv4(),
 			name: 'Feature 1',
 			status: 'GOOD',
-			controls: createControls(10, false),
+			controls: createControls(40, false),
+		},
+		{
+			id: uuidv4(),
+			name: 'Feature 2',
+			status: 'WARNING',
+			controls: createControls(2, true),
+		},
+		{
+			id: uuidv4(),
+			name: 'Feature 3',
+			status: 'GOOD',
+			controls: createControls(2, false),
+		},
+		{
+			id: uuidv4(),
+			name: 'Feature 4',
+			status: 'ERROR',
+			controls: createControls(5, true),
+		},
+		{
+			id: uuidv4(),
+			name: 'Feature 5',
+			status: 'GOOD',
+			controls: createControls(2, false),
+		},
+		{
+			id: uuidv4(),
+			name: 'Feature 6',
+			status: 'GOOD',
+			controls: createControls(2, false),
 		},
 	],
 };

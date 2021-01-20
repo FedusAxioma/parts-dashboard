@@ -4,7 +4,7 @@ import { createRenderer } from 'react-test-renderer/shallow';
 import React from 'react';
 import StatusHelper from '../../../src/helpers/StatusHelper';
 
-describe('App', () => {
+describe('ControlRow', () => {
 	const shallow = createRenderer();
 
 	test('renders component with all mandatory fields', () => {

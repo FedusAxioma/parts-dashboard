@@ -31,6 +31,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Use SVG images for icons and use it from CSS with class modifiers
 - Improve styling: colors in general, font sizes, icons, margins, etc
 - Implement bottom dots to open modal to visualize all controls for a given Feature
+- Add more tests
 
 ## Available Scripts
 

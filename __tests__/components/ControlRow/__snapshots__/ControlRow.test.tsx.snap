@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders component with all fields 1`] = `
+exports[`ControlRow renders component with all fields 1`] = `
 <div>
   <span>
     test
@@ -23,7 +23,7 @@ exports[`App renders component with all fields 1`] = `
 </div>
 `;
 
-exports[`App renders component with all mandatory fields 1`] = `
+exports[`ControlRow renders component with all mandatory fields 1`] = `
 <div>
   <span>
     test

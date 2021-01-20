@@ -1,28 +1,32 @@
 .featureGrid {
-	background-color: lightgray;
-	// margin: 5px;
 	display: flex;
 	flex-direction: column;
-	flex: 1;
-	
-	.controlsContainer {
+
+	.featureContainer {
+		background-color: lightgray;
 		display: flex;
-		flex-direction: column;
-		padding: 10px;
 		flex: 1;
-
-		.controlsHeaders {
-			width: 100%;
+		flex-direction: column;
+		margin: 5px;
+	
+		.controlsContainer {
 			display: flex;
-		}
-
-		.controlsValues {
-			display: flex;
-			flex-direction: column;
 			flex: 1;
-			flex-wrap: wrap;
-			overflow: hidden;
-			height: 500px;
+			flex-direction: column;
+			padding: 10px;
+
+			.controlsHeaders {
+				display: flex;
+			}
+
+			.controlsValues {
+				display: flex;
+				height: 500px;
+				flex: 1;
+				flex-direction: column;
+				flex-wrap: wrap;
+				overflow: hidden;
+			}
 		}
 	}
 }

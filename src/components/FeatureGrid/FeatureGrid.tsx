@@ -17,7 +17,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 		<div className={styles.featureGrid} style={{ flex: colsTotal }}>
 			{
 				children || (
-					<React.Fragment>
+					<div className={styles.featureContainer}>
 						<FeatureHeader title={feature?.name || ''} status={feature?.status || 'ERROR'} />
 						<div className={styles.controlsContainer}>
 							<div className={styles.controlsHeaders}>
@@ -35,7 +35,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 								}
 							</div>
 						</div>
-					</React.Fragment>
+					</div>
 				)
 			}
 		</div>

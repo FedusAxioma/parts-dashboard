@@ -9,6 +9,8 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - I decided to use React library for this FrontEnd project even though for low end devices its faster and more performant to use pure JavaScript, since it does not adds weight to the project and less code is shipped. But since most of the projects I understand are written using React, and I it will take me less time to do it this way, I'll go with it. There are also some advantages around the development process related to using a library or framework like this, and it is that it gives you structure, meaning consistent good results on long term, also reducing complexity (for instance, for rounting), and it will be easier to maintain over time, being a decent solution for a bigger audience.
 - I decided to use Context for global state managemenet since the solution small enought for it.
 - I didn't use GraphQL for the solution because of two reasons: I wanted to show how to connect to a backend (and using GraphQL I might connect to the DB directly) and also I don't think I was going to be able to properly set everything up at the given time.
+- The implemented dashboard has an individual layout specification, but the components used for it are very generic, so you can easily specify a new dashboard for a new Part in just a few minutes.
+- Used Flexbox to reduce number of media queries. Also decided to go for Flexbox instead of Grids so the dashboard layout is made based on components, and not changing anything at CSS level.
 
 ## Considerations
 
@@ -26,6 +28,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Implement technics for responsiveness
 - Move colors used on CSS to palette file
 - Use SVG images for icons and use it from CSS with class modifiers
+- Improve styling: colors in general, font sizes, icons, margins, etc
 
 ## Available Scripts
 

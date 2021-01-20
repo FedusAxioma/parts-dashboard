@@ -20,18 +20,20 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 					<React.Fragment>
 						<FeatureHeader title={feature?.name || ''} status={feature?.status || 'ERROR'} />
 						<div className={styles.controlsContainer}>
-							<div style={{ width: '100%', flexDirection: 'row', display: 'flex' }}>
+							<div className={styles.controlsHeaders}>
 								{
 									getColHeaders()
 								}
 							</div>
-							{
-								feature?.controls.map(control => (
-									<div style={{ width: colWith }} key={control.id}>
-										<ControlRow name={control.name} deviation={control.deviation} deviationOutTotal={control.deviationOutTotal} status={control.status} />
-									</div>
-								))
-							}
+							<div className={styles.controlsValues}>
+								{
+									feature?.controls.map(control => (
+										<div style={{ width: colWith }} key={control.id}>
+											<ControlRow name={control.name} deviation={control.deviation} deviationOutTotal={control.deviationOutTotal} status={control.status} />
+										</div>
+									))
+								}
+							</div>
 						</div>
 					</React.Fragment>
 				)

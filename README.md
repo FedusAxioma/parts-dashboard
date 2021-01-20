@@ -35,6 +35,7 @@ Build a dashboard website that shows Parts with Features for control with deviat
 - Implement bottom dots to open modal to visualize all controls for a given Feature
 - Add more tests
 - Use enums for Status
+- Add debounce on window resize listener so controls limit are not re-calculated very often
 
 ## Available Scripts
 

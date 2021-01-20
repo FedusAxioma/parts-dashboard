@@ -11,7 +11,7 @@ interface FeatureGridProps {
 }
 
 const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children }) => {
-	const { colWith, colsTotal, getColHeaders } = useFeatureGrid(colSpan);
+	const { colWith, colsTotal, controlsContainerRef, controlsLimit, getColHeaders } = useFeatureGrid(colSpan);
 
 	return (
 		<div className={styles.featureGrid} style={{ flex: colsTotal }}>
@@ -25,14 +25,16 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children })
 									getColHeaders()
 								}
 							</div>
-							<div className={styles.controlsValues}>
-								{
-									feature?.controls.map(control => (
-										<div style={{ width: colWith }} key={control.id}>
-											<ControlRow name={control.name} deviation={control.deviation} deviationOutTotal={control.deviationOutTotal} status={control.status} />
-										</div>
-									))
-								}
+							<div className={styles.controlsValuesContainer} ref={controlsContainerRef}>
+								<div className={styles.controlsValues}>
+									{
+										feature?.controls.slice(0, controlsLimit * colsTotal).map(control => (
+											<div style={{ width: colWith }} key={control.id}>
+												<ControlRow name={control.name} deviation={control.deviation} deviationOutTotal={control.deviationOutTotal} status={control.status} />
+											</div>
+										))
+									}
+								</div>
 							</div>
 						</div>
 					</div>

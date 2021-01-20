@@ -52,7 +52,7 @@ const mockPartA: Part = {
 			id: uuidv4(),
 			name: 'Feature 5',
 			status: 'GOOD',
-			controls: createControls(2, false),
+			controls: createControls(18, false),
 		},
 		{
 			id: uuidv4(),

@@ -19,13 +19,22 @@
 				display: flex;
 			}
 
-			.controlsValues {
-				display: flex;
+			.controlsValuesContainer {
+				position: relative;
 				flex: 1;
-				flex-direction: column;
-				flex-wrap: wrap;
-				height: 500px;
-				overflow: hidden;
+
+				.controlsValues{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					display: flex;
+					flex: 1;
+					flex-direction: column;
+					flex-wrap: wrap;
+					overflow: hidden;
+				}
 			}
 		}
 	}

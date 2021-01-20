@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders component with all fields 1`] = `
+<div>
+  <span>
+    test
+  </span>
+  <span>
+    10
+  </span>
+  <span>
+    20
+  </span>
+  <span>
+    <AiFillWarning
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+    />
+  </span>
+</div>
+`;
+
+exports[`App renders component with all mandatory fields 1`] = `
+<div>
+  <span>
+    test
+  </span>
+  <span>
+    10
+  </span>
+  <span>
+    20
+  </span>
+  <span />
+</div>
+`;

@@ -63,9 +63,6 @@
 		},
 		"moduleNameMapper": {
 			"\\.(css|sass|scss)$": "<rootDir>/__tests__/__mocks__/styleMock.js"
-		},
-		"setupFiles": [
-			"<rootDir>/__tests__/setup.ts"
-		]
+		}
 	}
 }

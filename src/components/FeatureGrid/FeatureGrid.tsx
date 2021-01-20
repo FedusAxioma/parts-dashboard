@@ -1,9 +1,9 @@
 import ControlRow from '../ControlRow';
-import ControlRowHeader from '../ControlRow/ControlRowHeader';
 import { Feature } from '../../interfaces/Feature';
 import FeatureHeader from '../FeatureHeader';
 import React from 'react';
 import styles from './FeatureGrid.module.scss';
+import useFeatureGrid from './UseFeatureGrid';
 
 interface FeatureGridProps {
 	colSpan?: number;
@@ -11,21 +11,7 @@ interface FeatureGridProps {
 }
 
 const FeatureGrid: React.FC<FeatureGridProps> = ({ colSpan, feature, children }) => {
-	const colsTotal = colSpan || 1;
-	const colWith = `${100 / colsTotal}%`;
-	const getColHeaders = (): JSX.Element[] => {
-		const colHeaders = [];
-
-		for (let i = 0; i < colsTotal; i++) {
-			colHeaders.push(
-				<div style={{ width: colWith }} key={i}>
-					<ControlRowHeader />
-				</div>
-			);
-		}
-
-		return colHeaders;
-	};
+	const { colWith, colsTotal, getColHeaders } = useFeatureGrid(colSpan);
 
 	return (
 		<div className={styles.featureGrid} style={{ flex: colsTotal }}>

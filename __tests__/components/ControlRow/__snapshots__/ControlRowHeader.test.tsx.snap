@@ -2,7 +2,7 @@
 
 exports[`ControlRowHeader renders component 1`] = `
 <div>
-  <ControlRow
+  <UNDEFINED
     deviation="Dev"
     deviationOutTotal="Dev Out Tol"
     name="Control"

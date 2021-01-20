@@ -20,20 +20,20 @@
 			}
 
 			.controlsValuesContainer {
-				position: relative;
 				flex: 1;
+				position: relative;
 
 				.controlsValues{
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
 					bottom: 0;
 					display: flex;
 					flex: 1;
 					flex-direction: column;
 					flex-wrap: wrap;
+					left: 0;
 					overflow: hidden;
+					position: absolute;
+					right: 0;
+					top: 0;
 				}
 			}
 		}
